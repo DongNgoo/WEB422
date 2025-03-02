@@ -8,6 +8,7 @@
 *  Vercel Link: https://web-422-96to.vercel.app/
 *
 ********************************************************************************/ 
+const path = require('path');
 
 let express = require('express');
 let cors = require('cors');
@@ -19,7 +20,7 @@ let app = express();
 
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.json({ message: "API Listening" });
 });
