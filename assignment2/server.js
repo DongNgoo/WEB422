@@ -48,7 +48,7 @@ app.post('/api/movies', (req, res) => {
         res.status(500).json({ message: 'Error getting movies' });
       });
   });
-  
+  //build
   // GET /api/movies/:id
   app.get('/api/movies/:id', (req, res) => {
   db.getMovieById(req.params.id)
